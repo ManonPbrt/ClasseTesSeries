@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Classement Series</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Genre</th>
+      <th>Synopsis</th>
+      <th>Note</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @classement_series.each do |classement_series| %>
+      <tr>
+        <td><%= classement_series.nom %></td>
+        <td><%= classement_series.genre %></td>
+        <td><%= classement_series.synopsis %></td>
+        <td><%= classement_series.note %></td>
+        <td><%= link_to 'Show', classement_series %></td>
+        <td><%= link_to 'Edit', edit_classement_series_path(classement_series) %></td>
+        <td><%= link_to 'Destroy', classement_series, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Classement Series', new_classement_series_path %>

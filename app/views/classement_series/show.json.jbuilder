@@ -1,0 +1,1 @@
+json.partial! "classement_series/classement_series", classement_series: @classement_series

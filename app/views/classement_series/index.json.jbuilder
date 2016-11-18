@@ -1,0 +1,1 @@
+json.array! @classement_series, partial: 'classement_series/classement_series', as: :classement_series

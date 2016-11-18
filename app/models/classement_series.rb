@@ -1,0 +1,2 @@
+class ClassementSeries < ApplicationRecord
+end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @classement_series.nom %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @classement_series.genre %>
+</p>
+
+<p>
+  <strong>Synopsis:</strong>
+  <%= @classement_series.synopsis %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @classement_series.note %>
+</p>
+
+<%= link_to 'Edit', edit_classement_series_path(@classement_series) %> |
+<%= link_to 'Back', classement_series_index_path %>
