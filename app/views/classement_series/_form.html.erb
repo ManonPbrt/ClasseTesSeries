@@ -1,3 +1,7 @@
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
 <%= form_for(classement_series) do |f| %>
   <% if classement_series.errors.any? %>
     <div id="error_explanation">
@@ -12,8 +16,10 @@
   <% end %>
 
   <div class="field">
+    <div class="nom">
     <%= f.label :nom %>
     <%= f.text_area :nom %>
+    </div>
   </div>
 
   <div class="field">
@@ -27,18 +33,32 @@
   </div>
 
   <div class="field"> 
-    <%= f.label :note %>
-     
-      <input type="radio"> 
-      <input type="radio">
-      <input type="radio">
-      <input type="radio">
-      <input type="radio">
-   
+    <%= f.label :note %> 
+    <br>
+  <div class="stars">
+
+    <form action="">
+
+      <input class="star star-5" id="star-5" type="radio" name="star"/>
+      <label class="star star-5" for="star-5"></label>
+      <input class="star star-4" id="star-4" type="radio" name="star"/>
+      <label class="star star-4" for="star-4"></label>
+      <input class="star star-3" id="star-3" type="radio" name="star"/>
+      <label class="star star-3" for="star-3"></label>
+      <input class="star star-2" id="star-2" type="radio" name="star"/>
+      <label class="star star-2" for="star-2"></label>
+      <input class="star star-1" id="star-1" type="radio" name="star"/>
+      <label class="star star-1" for="star-1"></label>
+
+    </form>
+
+  </div>
+  </br>
+</p>
 
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+   <br> <%= f.submit 'Ajouter'%> </br>
   </div>
 <% end %>
